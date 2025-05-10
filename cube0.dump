@@ -17,7 +17,7 @@ b'GLOB' block of size 1104 at b1593fd130 containing 1 objects of type FileGlobal
     void *_pad1 = 0
     int fileflags = 33558528
     int globalf = 16
-    uint64_t build_commit_timestamp = // 8 bytes
+    uint64_t build_commit_timestamp = 1745935785
     char build_hash[16] = b'802179c51ccc' // + 4 bytes 
     char filename[1024] = b'' // + 1024 bytes 
   }
@@ -60,7 +60,7 @@ b'WM\x00\x00' block of size 1456 at 1d16f6ba420 containing 1 objects of type wmW
       void *first = 1d106b23ae0
       void *last = 1d106b23ae0
     }
-    uchar init_flag = // 1 bytes
+    uchar init_flag = 3
     char _pad0[1] = b'' // + 1 bytes 
     short file_saved = 0
     short op_undo_depth = 0
@@ -254,7 +254,7 @@ b'DATA' block of size 376 at 1d106b23ae0 containing 1 objects of type wmWindow
       void *last = 0
     }
     void *cursor_keymap_status = 1d106b1a408
-    uint64_t eventstate_prev_press_time_ms = // 8 bytes
+    uint64_t eventstate_prev_press_time_ms = 42659044
   }
 b'DATA' block of size 32 at 1d106b37120 containing 1 objects of type WorkSpaceInstanceHook
   #0 = { // 32 bytes
@@ -13086,10 +13086,10 @@ b'DATA' block of size 120 at 1d1070ed780 containing 1 objects of type SpaceSprea
     }
     SpreadsheetInstanceID *instance_ids = 0
     int instance_ids_num = 0
-    uchar filter_flag = // 1 bytes
-    uchar geometry_component_type = // 1 bytes
-    uchar attribute_domain = // 1 bytes
-    uchar object_eval_state = // 1 bytes
+    uchar filter_flag = 2
+    uchar geometry_component_type = 0
+    uchar attribute_domain = 0
+    uchar object_eval_state = 0
     int active_layer_index = 0
     int flag = 0
     SpaceSpreadsheet_Runtime *runtime = 0
@@ -13099,7 +13099,7 @@ b'DATA' block of size 40 at 1d106af7990 containing 1 objects of type Spreadsheet
     SpreadsheetColumn *next = 0
     SpreadsheetColumn *prev = 0
     SpreadsheetColumnID *id = 1d1070bc780
-    uchar data_type = // 1 bytes
+    uchar data_type = 4
     char _pad0[7] = b'' // + 7 bytes 
     char *display_name = 1d1070bc720
   }
@@ -38030,7 +38030,7 @@ b'DATA' block of size 2088 at 1d106b48120 containing 1 objects of type FileSelec
     void *_pad3 = 0
     char filter_glob[256] = b'' // + 256 bytes 
     char filter_search[64] = b'' // + 64 bytes 
-    uint64_t filter_id = // 8 bytes
+    uint64_t filter_id = 18446744072635809791
     int active_file = -1
     int highlight_file = -1
     int sel_first = 0
@@ -51711,18 +51711,18 @@ b'SC\x00\x00' block of size 6744 at 1d106b0a060 containing 1 objects of type Sce
     }
     void *_pad8 = 0
     CustomData_MeshMasks customdata_mask = { // 40 bytes
-      uint64_t vmask = // 8 bytes
-      uint64_t emask = // 8 bytes
-      uint64_t fmask = // 8 bytes
-      uint64_t pmask = // 8 bytes
-      uint64_t lmask = // 8 bytes
+      uint64_t vmask = 281474976710656
+      uint64_t emask = 70368744177664
+      uint64_t fmask = 0
+      uint64_t pmask = 0
+      uint64_t lmask = 2048
     }
     CustomData_MeshMasks customdata_mask_modal = { // 40 bytes
-      uint64_t vmask = // 8 bytes
-      uint64_t emask = // 8 bytes
-      uint64_t fmask = // 8 bytes
-      uint64_t pmask = // 8 bytes
-      uint64_t lmask = // 8 bytes
+      uint64_t vmask = 0
+      uint64_t emask = 0
+      uint64_t fmask = 0
+      uint64_t pmask = 0
+      uint64_t lmask = 0
     }
     ColorManagedViewSettings view_settings = { // 168 bytes
       int flag = 0
@@ -51916,7 +51916,7 @@ b'DATA' block of size 1088 at 1d106adcf20 containing 1 objects of type ToolSetti
       CurveMapping *strength_curve = 1d106b26620
       int size = 50
       float strength = 1.0
-      int8_t curve_preset = // 1 bytes
+      int8_t curve_preset = 1
       char _pad[7] = b'' // + 7 bytes 
     }
     GpPaint *gp_paint = 1d1070ed820
@@ -54980,7 +54980,7 @@ b'DATA' block of size 3256 at 1d106b120a0 containing 1 objects of type Editing
     float recycle_max_cost = 10.0
     int cache_flag = 9
     PrefetchJob *prefetch_job = 0
-    int64_t disk_cache_timestamp = // 8 bytes
+    int64_t disk_cache_timestamp = 0
     EditingRuntime runtime = { // 32 bytes
       StripLookup *strip_lookup = 0
       MediaPresence *media_presence = 0
@@ -56523,13 +56523,13 @@ b'DATA' block of size 376 at 1d106b202e0 containing 1 objects of type Collection
       #1 = 0.0
       #2 = 0.0
     }
-    uchar flag = // 1 bytes
-    int8_t color_tag = // 1 bytes
+    uchar flag = 32
+    int8_t color_tag = -1
     char _pad1[2] = b'' // + 2 bytes 
-    uchar lineart_usage = // 1 bytes
-    uchar lineart_flags = // 1 bytes
-    uchar lineart_intersection_mask = // 1 bytes
-    uchar lineart_intersection_priority = // 1 bytes
+    uchar lineart_usage = 0
+    uchar lineart_flags = 0
+    uchar lineart_intersection_mask = 0
+    uchar lineart_intersection_priority = 0
     ViewLayer *view_layer = 0
     Collection_Runtime runtime = { // 64 bytes
       ListBase object_cache = { // 16 bytes
@@ -56545,7 +56545,7 @@ b'DATA' block of size 376 at 1d106b202e0 containing 1 objects of type Collection
         void *last = 0
       }
       GHash *gobject_hash = 0
-      uchar tag = // 1 bytes
+      uchar tag = 0
       char _pad0[7] = b'' // + 7 bytes 
     }
   }
@@ -56555,11 +56555,11 @@ b'DATA' block of size 32 at 1d106b34760 containing 1 objects of type CollectionC
     CollectionChild *prev = 0
     Collection *collection = 1d106b20120
     CollectionLightLinking light_linking = { // 4 bytes
-      uchar link_state = // 1 bytes
+      uchar link_state = 0
       uchar _pad[3] = {  // 3 bytes
-        #0 = // 3 bytes
-        #1 = // 3 bytes
-        #2 = // 3 bytes
+        #0 = 0
+        #1 = 0
+        #2 = 0
       }
     }
     int _pad = 0
@@ -57979,13 +57979,13 @@ b'GR\x00\x00' block of size 376 at 1d106b20120 containing 1 objects of type Coll
       #1 = 0.0
       #2 = 0.0
     }
-    uchar flag = // 1 bytes
-    int8_t color_tag = // 1 bytes
+    uchar flag = 0
+    int8_t color_tag = -1
     char _pad1[2] = b'' // + 2 bytes 
-    uchar lineart_usage = // 1 bytes
-    uchar lineart_flags = // 1 bytes
-    uchar lineart_intersection_mask = // 1 bytes
-    uchar lineart_intersection_priority = // 1 bytes
+    uchar lineart_usage = 0
+    uchar lineart_flags = 0
+    uchar lineart_intersection_mask = 0
+    uchar lineart_intersection_priority = 0
     ViewLayer *view_layer = 0
     Collection_Runtime runtime = { // 64 bytes
       ListBase object_cache = { // 16 bytes
@@ -58001,7 +58001,7 @@ b'GR\x00\x00' block of size 376 at 1d106b20120 containing 1 objects of type Coll
         void *last = 0
       }
       GHash *gobject_hash = 0
-      uchar tag = // 1 bytes
+      uchar tag = 0
       char _pad0[7] = b'' // + 7 bytes 
     }
   }
@@ -58011,11 +58011,11 @@ b'DATA' block of size 32 at 1d106ef5e78 containing 1 objects of type CollectionO
     CollectionObject *prev = 0
     Object *ob = 1d10736a408
     CollectionLightLinking light_linking = { // 4 bytes
-      uchar link_state = // 1 bytes
+      uchar link_state = 0
       uchar _pad[3] = {  // 3 bytes
-        #0 = // 3 bytes
-        #1 = // 3 bytes
-        #2 = // 3 bytes
+        #0 = 0
+        #1 = 0
+        #2 = 0
       }
     }
     int _pad = 0
@@ -58290,7 +58290,7 @@ b'OB\x00\x00' block of size 1160 at 1d10736a408 containing 1 objects of type Obj
     char empty_image_visibility_flag = b'\x00'
     char empty_image_depth = b'\x00'
     char empty_image_flag = b'\x00'
-    uchar modifier_flag = // 1 bytes
+    uchar modifier_flag = 0
     char _pad8[4] = b'' // + 4 bytes 
     PreviewImage *preview = 0
     ObjectLineArt lineart = { // 16 bytes
@@ -58621,7 +58621,7 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     }
     char texflag = b'\x03'
     char editflag = b'\x01'
-    ushort flag = // 2 bytes
+    ushort flag = 16640
     float smoothresh = 0.0
     float remesh_voxel_size = 0.10000000149011612
     float remesh_voxel_adaptivity = 0.0
@@ -59262,7 +59262,7 @@ b'WO\x00\x00' block of size 400 at 1d106ab3e60 containing 1 objects of type Worl
       void *first = 0
       void *last = 0
     }
-    uint64_t last_update = // 8 bytes
+    uint64_t last_update = 0
   }
 b'DATA' block of size 544 at 1d106ac2720 containing 1 objects of type bNodeTree
   #0 = { // 544 bytes
@@ -59388,7 +59388,7 @@ b'DATA' block of size 376 at 1d106ab3ca0 containing 1 objects of type bNode
     short custom2 = 0
     float custom3 = 0.0
     float custom4 = 0.0
-    int8_t warning_propagation = // 1 bytes
+    int8_t warning_propagation = 0
     char _pad[7] = b'' // + 7 bytes 
     ID *id = 0
     void *storage = 0
@@ -59529,7 +59529,7 @@ b'DATA' block of size 376 at 1d106ab3ae0 containing 1 objects of type bNode
     short custom2 = 0
     float custom3 = 0.0
     float custom4 = 0.0
-    int8_t warning_propagation = // 1 bytes
+    int8_t warning_propagation = 0
     char _pad[7] = b'' // + 7 bytes 
     ID *id = 0
     void *storage = 0
