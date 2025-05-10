@@ -2825,8 +2825,8 @@ struct ArmatureGpencilModifierData // 192 bytes [#213]
     short      multi                 //    2 bytes, offset 106
     int        _pad                  //    4 bytes, offset 108
     Object     *object               //    8 bytes, offset 112
-    float      (*vert_coords_prev)() //    4 bytes, offset 120
-    char       vgname[64]            //   64 bytes, offset 124
+    float      (*vert_coords_prev)() //    8 bytes, offset 120
+    char       vgname[64]            //   64 bytes, offset 128
 struct MultiplyGpencilModifierData // 280 bytes [#214]
     GpencilModifierData modifier     //  104 bytes, offset 0
     Material   *material             //    8 bytes, offset 104
@@ -3301,7 +3301,7 @@ struct ViewLayerEngineData // 40 bytes [#250]
     ViewLayerEngineData *prev        //    8 bytes, offset 8
     DrawEngineType *engine_type      //    8 bytes, offset 16
     void       *storage              //    8 bytes, offset 24
-    void       (*free)()             //    0 bytes, offset 32
+    void       (*free)()             //    8 bytes, offset 32
 struct LayerCollection // 64 bytes [#251]
     LayerCollection *next            //    8 bytes, offset 0
     LayerCollection *prev            //    8 bytes, offset 8
@@ -3482,17 +3482,17 @@ struct LightCache // 128 bytes [#262]
     LightProbeCache *cube_data       //    8 bytes, offset 112
     LightGridCache *grid_data        //    8 bytes, offset 120
 struct LightProbeBakingData // 48 bytes [#263]
-    float      (*L0)()               //    4 bytes, offset 0
-    float      (*L1_a)()             //    4 bytes, offset 4
-    float      (*L1_b)()             //    4 bytes, offset 8
-    float      (*L1_c)()             //    4 bytes, offset 12
-    float      *validity             //    8 bytes, offset 16
-    float      (*virtual_offset)()   //    4 bytes, offset 24
+    float      (*L0)()               //    8 bytes, offset 0
+    float      (*L1_a)()             //    8 bytes, offset 8
+    float      (*L1_b)()             //    8 bytes, offset 16
+    float      (*L1_c)()             //    8 bytes, offset 24
+    float      *validity             //    8 bytes, offset 32
+    float      (*virtual_offset)()   //    8 bytes, offset 40
 struct LightProbeIrradianceData // 32 bytes [#264]
-    float      (*L0)()               //    4 bytes, offset 0
-    float      (*L1_a)()             //    4 bytes, offset 4
-    float      (*L1_b)()             //    4 bytes, offset 8
-    float      (*L1_c)()             //    4 bytes, offset 12
+    float      (*L0)()               //    8 bytes, offset 0
+    float      (*L1_a)()             //    8 bytes, offset 8
+    float      (*L1_b)()             //    8 bytes, offset 16
+    float      (*L1_c)()             //    8 bytes, offset 24
 struct LightProbeVisibilityData // 32 bytes [#265]
     float      *L0                   //    8 bytes, offset 0
     float      *L1_a                 //    8 bytes, offset 8
@@ -4073,8 +4073,8 @@ struct MPropCol // 16 bytes [#337]
 struct MDisps // 24 bytes [#338]
     int        totdisp               //    4 bytes, offset 0
     int        level                 //    4 bytes, offset 4
-    float      (*disps)()            //    4 bytes, offset 8
-    int        *hidden               //    8 bytes, offset 12
+    float      (*disps)()            //    8 bytes, offset 8
+    int        *hidden               //    8 bytes, offset 16
 struct GridPaintMask // 16 bytes [#339]
     float      *data                 //    8 bytes, offset 0
     int        level                 //    4 bytes, offset 8
@@ -4379,8 +4379,8 @@ struct ArmatureModifierData // 208 bytes [#371]
     short      multi                 //    2 bytes, offset 122
     char       _pad2[4]              //    4 bytes, offset 124
     Object     *object               //    8 bytes, offset 128
-    float      (*vert_coords_prev)() //    4 bytes, offset 136
-    char       defgrp_name[64]       //   64 bytes, offset 140
+    float      (*vert_coords_prev)() //    8 bytes, offset 136
+    char       defgrp_name[64]       //   64 bytes, offset 144
 struct HookModifierData // 376 bytes [#372]
     ModifierData modifier            //  120 bytes, offset 0
     Object     *object               //    8 bytes, offset 120
@@ -4414,27 +4414,27 @@ struct ClothModifierData // 224 bytes [#374]
     ClothSolverResult *solver_result //    8 bytes, offset 216
 struct CollisionModifierData // 208 bytes [#375]
     ModifierData modifier            //  120 bytes, offset 0
-    float      (*x)()                //    4 bytes, offset 120
-    float      (*xnew)()             //    4 bytes, offset 124
-    float      (*xold)()             //    4 bytes, offset 128
-    float      (*current_xnew)()     //    4 bytes, offset 132
-    float      (*current_x)()        //    4 bytes, offset 136
-    float      (*current_v)()        //    4 bytes, offset 140
-    int        (*vert_tris)()        //    4 bytes, offset 144
-    int        mvert_num             //    4 bytes, offset 148
-    int        tri_num               //    4 bytes, offset 152
-    float      time_x                //    4 bytes, offset 156
-    float      time_xnew             //    4 bytes, offset 160
-    char       is_static             //    1 bytes, offset 164
-    char       _pad[7]               //    7 bytes, offset 165
-    BVHTree    *bvhtree              //    8 bytes, offset 172
+    float      (*x)()                //    8 bytes, offset 120
+    float      (*xnew)()             //    8 bytes, offset 128
+    float      (*xold)()             //    8 bytes, offset 136
+    float      (*current_xnew)()     //    8 bytes, offset 144
+    float      (*current_x)()        //    8 bytes, offset 152
+    float      (*current_v)()        //    8 bytes, offset 160
+    int        (*vert_tris)()        //    8 bytes, offset 168
+    int        mvert_num             //    4 bytes, offset 176
+    int        tri_num               //    4 bytes, offset 180
+    float      time_x                //    4 bytes, offset 184
+    float      time_xnew             //    4 bytes, offset 188
+    char       is_static             //    1 bytes, offset 192
+    char       _pad[7]               //    7 bytes, offset 193
+    BVHTree    *bvhtree              //    8 bytes, offset 200
 struct SurfaceModifierData_Runtime // 40 bytes [#376]
-    float      (*vert_positions_prev)() //    4 bytes, offset 0
-    float      (*vert_velocities)()  //    4 bytes, offset 4
-    Mesh       *mesh                 //    8 bytes, offset 8
-    BVHTreeFromMeshHandle *bvhtree   //    8 bytes, offset 16
-    int        cfra_prev             //    4 bytes, offset 24
-    int        verts_num             //    4 bytes, offset 28
+    float      (*vert_positions_prev)() //    8 bytes, offset 0
+    float      (*vert_velocities)()  //    8 bytes, offset 8
+    Mesh       *mesh                 //    8 bytes, offset 16
+    BVHTreeFromMeshHandle *bvhtree   //    8 bytes, offset 24
+    int        cfra_prev             //    4 bytes, offset 32
+    int        verts_num             //    4 bytes, offset 36
 struct SurfaceModifierData // 160 bytes [#377]
     ModifierData modifier            //  120 bytes, offset 0
     SurfaceModifierData_Runtime runtime //   40 bytes, offset 120
@@ -4477,7 +4477,7 @@ struct MeshDeformModifierData // 368 bytes [#381]
     float      bindmat[4][4]         //   64 bytes, offset 280
     float      *bindweights          //    8 bytes, offset 344
     float      *bindcos              //    8 bytes, offset 352
-    void       (*bindfunc)()         //    0 bytes, offset 360
+    void       (*bindfunc)()         //    8 bytes, offset 360
 struct ParticleSystemModifierData // 168 bytes [#382]
     ModifierData modifier            //  120 bytes, offset 0
     ParticleSystem *psys             //    8 bytes, offset 120
@@ -4747,28 +4747,28 @@ struct LaplacianSmoothModifierData // 200 bytes [#402]
     short      flag                  //    2 bytes, offset 196
     short      repeat                //    2 bytes, offset 198
 struct CorrectiveSmoothDeltaCache // 32 bytes [#403]
-    float      (*deltas)()           //    4 bytes, offset 0
-    int        deltas_num            //    4 bytes, offset 4
-    float      lambda                //    4 bytes, offset 8
-    float      scale                 //    4 bytes, offset 12
-    short      repeat                //    2 bytes, offset 16
-    short      flag                  //    2 bytes, offset 18
-    char       smooth_type           //    1 bytes, offset 20
-    char       rest_source           //    1 bytes, offset 21
-    char       _pad[6]               //    6 bytes, offset 22
+    float      (*deltas)()           //    8 bytes, offset 0
+    int        deltas_num            //    4 bytes, offset 8
+    float      lambda                //    4 bytes, offset 12
+    float      scale                 //    4 bytes, offset 16
+    short      repeat                //    2 bytes, offset 20
+    short      flag                  //    2 bytes, offset 22
+    char       smooth_type           //    1 bytes, offset 24
+    char       rest_source           //    1 bytes, offset 25
+    char       _pad[6]               //    6 bytes, offset 26
 struct CorrectiveSmoothModifierData // 248 bytes [#404]
     ModifierData modifier            //  120 bytes, offset 0
-    float      (*bind_coords)()      //    4 bytes, offset 120
-    int        bind_coords_num       //    4 bytes, offset 124
-    float      lambda                //    4 bytes, offset 128
-    float      scale                 //    4 bytes, offset 132
-    short      repeat                //    2 bytes, offset 136
-    short      flag                  //    2 bytes, offset 138
-    char       smooth_type           //    1 bytes, offset 140
-    char       rest_source           //    1 bytes, offset 141
-    char       _pad[6]               //    6 bytes, offset 142
-    char       defgrp_name[64]       //   64 bytes, offset 148
-    CorrectiveSmoothDeltaCache delta_cache //   32 bytes, offset 212
+    float      (*bind_coords)()      //    8 bytes, offset 120
+    int        bind_coords_num       //    4 bytes, offset 128
+    float      lambda                //    4 bytes, offset 132
+    float      scale                 //    4 bytes, offset 136
+    short      repeat                //    2 bytes, offset 140
+    short      flag                  //    2 bytes, offset 142
+    char       smooth_type           //    1 bytes, offset 144
+    char       rest_source           //    1 bytes, offset 145
+    char       _pad[6]               //    6 bytes, offset 146
+    char       defgrp_name[64]       //   64 bytes, offset 152
+    CorrectiveSmoothDeltaCache delta_cache //   32 bytes, offset 216
 struct UVWarpModifierData // 432 bytes [#405]
     ModifierData modifier            //  120 bytes, offset 0
     char       axis_u                //    1 bytes, offset 120
@@ -6876,55 +6876,55 @@ struct ParticleSystem // 696 bytes [#672]
     ParticleData *particles          //    8 bytes, offset 24
     ChildParticle *child             //    8 bytes, offset 32
     PTCacheEdit *edit                //    8 bytes, offset 40
-    void       (*free_edit)()        //    0 bytes, offset 48
-    ParticleCacheKey **pathcache     //    8 bytes, offset 48
-    ParticleCacheKey **childcache    //    8 bytes, offset 56
-    ListBase   pathcachebufs         //   16 bytes, offset 64
-    ListBase   childcachebufs        //   16 bytes, offset 80
-    ClothModifierData *clmd          //    8 bytes, offset 96
-    Mesh       *hair_in_mesh         //    8 bytes, offset 104
-    Mesh       *hair_out_mesh        //    8 bytes, offset 112
-    Object     *target_ob            //    8 bytes, offset 120
-    LatticeDeformData *lattice_deform_data //    8 bytes, offset 128
-    Object     *parent               //    8 bytes, offset 136
-    ListBase   targets               //   16 bytes, offset 144
-    char       name[64]              //   64 bytes, offset 160
-    float      imat[4][4]            //   64 bytes, offset 224
-    float      cfra                  //    4 bytes, offset 288
-    float      tree_frame            //    4 bytes, offset 292
-    float      bvhtree_frame         //    4 bytes, offset 296
-    int        seed                  //    4 bytes, offset 300
-    int        child_seed            //    4 bytes, offset 304
-    int        flag                  //    4 bytes, offset 308
-    int        totpart               //    4 bytes, offset 312
-    int        totunexist            //    4 bytes, offset 316
-    int        totchild              //    4 bytes, offset 320
-    int        totcached             //    4 bytes, offset 324
-    int        totchildcache         //    4 bytes, offset 328
-    int        recalc                //    4 bytes, offset 332
-    short      target_psys           //    2 bytes, offset 336
-    short      totkeyed              //    2 bytes, offset 338
-    short      bakespace             //    2 bytes, offset 340
-    char       _pad1[6]              //    6 bytes, offset 342
-    char       bb_uvname[3][68]      //  204 bytes, offset 348
-    char       _pad2[4]              //    4 bytes, offset 552
-    short      vgroup[13]            //   26 bytes, offset 556
-    short      vg_neg                //    2 bytes, offset 582
-    short      rt3                   //    2 bytes, offset 584
-    char       _pad3[6]              //    6 bytes, offset 586
-    PointCache *pointcache           //    8 bytes, offset 592
-    ListBase   ptcaches              //   16 bytes, offset 600
-    ListBase   *effectors            //    8 bytes, offset 616
-    ParticleSpring *fluid_springs    //    8 bytes, offset 624
-    int        tot_fluidsprings      //    4 bytes, offset 632
-    int        alloc_fluidsprings    //    4 bytes, offset 636
-    KDTree_3d  *tree                 //    8 bytes, offset 640
-    BVHTree    *bvhtree              //    8 bytes, offset 648
-    ParticleDrawData *pdd            //    8 bytes, offset 656
-    float      dt_frac               //    4 bytes, offset 664
-    float      lattice_strength      //    4 bytes, offset 668
-    void       *batch_cache          //    8 bytes, offset 672
-    ParticleSystem *orig_psys        //    8 bytes, offset 680
+    void       (*free_edit)()        //    8 bytes, offset 48
+    ParticleCacheKey **pathcache     //    8 bytes, offset 56
+    ParticleCacheKey **childcache    //    8 bytes, offset 64
+    ListBase   pathcachebufs         //   16 bytes, offset 72
+    ListBase   childcachebufs        //   16 bytes, offset 88
+    ClothModifierData *clmd          //    8 bytes, offset 104
+    Mesh       *hair_in_mesh         //    8 bytes, offset 112
+    Mesh       *hair_out_mesh        //    8 bytes, offset 120
+    Object     *target_ob            //    8 bytes, offset 128
+    LatticeDeformData *lattice_deform_data //    8 bytes, offset 136
+    Object     *parent               //    8 bytes, offset 144
+    ListBase   targets               //   16 bytes, offset 152
+    char       name[64]              //   64 bytes, offset 168
+    float      imat[4][4]            //   64 bytes, offset 232
+    float      cfra                  //    4 bytes, offset 296
+    float      tree_frame            //    4 bytes, offset 300
+    float      bvhtree_frame         //    4 bytes, offset 304
+    int        seed                  //    4 bytes, offset 308
+    int        child_seed            //    4 bytes, offset 312
+    int        flag                  //    4 bytes, offset 316
+    int        totpart               //    4 bytes, offset 320
+    int        totunexist            //    4 bytes, offset 324
+    int        totchild              //    4 bytes, offset 328
+    int        totcached             //    4 bytes, offset 332
+    int        totchildcache         //    4 bytes, offset 336
+    int        recalc                //    4 bytes, offset 340
+    short      target_psys           //    2 bytes, offset 344
+    short      totkeyed              //    2 bytes, offset 346
+    short      bakespace             //    2 bytes, offset 348
+    char       _pad1[6]              //    6 bytes, offset 350
+    char       bb_uvname[3][68]      //  204 bytes, offset 356
+    char       _pad2[4]              //    4 bytes, offset 560
+    short      vgroup[13]            //   26 bytes, offset 564
+    short      vg_neg                //    2 bytes, offset 590
+    short      rt3                   //    2 bytes, offset 592
+    char       _pad3[6]              //    6 bytes, offset 594
+    PointCache *pointcache           //    8 bytes, offset 600
+    ListBase   ptcaches              //   16 bytes, offset 608
+    ListBase   *effectors            //    8 bytes, offset 624
+    ParticleSpring *fluid_springs    //    8 bytes, offset 632
+    int        tot_fluidsprings      //    4 bytes, offset 640
+    int        alloc_fluidsprings    //    4 bytes, offset 644
+    KDTree_3d  *tree                 //    8 bytes, offset 648
+    BVHTree    *bvhtree              //    8 bytes, offset 656
+    ParticleDrawData *pdd            //    8 bytes, offset 664
+    float      dt_frac               //    4 bytes, offset 672
+    float      lattice_strength      //    4 bytes, offset 676
+    void       *batch_cache          //    8 bytes, offset 680
+    ParticleSystem *orig_psys        //    8 bytes, offset 688
 struct PTCacheExtra // 32 bytes [#673]
     PTCacheExtra *next               //    8 bytes, offset 0
     PTCacheExtra *prev               //    8 bytes, offset 8
@@ -6965,7 +6965,7 @@ struct PointCache // 1392 bytes [#675]
     char       _pad1[4]              //    4 bytes, offset 1356
     ListBase   mem_cache             //   16 bytes, offset 1360
     PTCacheEdit *edit                //    8 bytes, offset 1376
-    void       (*free_edit)()        //    0 bytes, offset 1384
+    void       (*free_edit)()        //    8 bytes, offset 1384
 struct PointCloud // 512 bytes, is ID [#676]
     ID         id                    //  208 bytes, offset 0
     AnimData   *adt                  //    8 bytes, offset 208
@@ -10089,10 +10089,10 @@ struct View3DOverlay // 128 bytes [#896]
     float      sculpt_curves_cage_opacity //    4 bytes, offset 124
 struct View3D_Runtime // 32 bytes [#897]
     void       *properties_storage   //    8 bytes, offset 0
-    void       (*properties_storage_free)() //    0 bytes, offset 8
-    int        flag                  //    4 bytes, offset 8
-    char       _pad1[4]              //    4 bytes, offset 12
-    SceneStats *local_stats          //    8 bytes, offset 16
+    void       (*properties_storage_free)() //    8 bytes, offset 8
+    int        flag                  //    4 bytes, offset 16
+    char       _pad1[4]              //    4 bytes, offset 20
+    SceneStats *local_stats          //    8 bytes, offset 24
 struct View3D // 1400 bytes [#898]
     SpaceLink  *next                 //    8 bytes, offset 0
     SpaceLink  *prev                 //    8 bytes, offset 8
@@ -10351,9 +10351,9 @@ struct wmKeyMap // 272 bytes [#917]
     char       owner_id[128]         //  128 bytes, offset 116
     short      flag                  //    2 bytes, offset 244
     short      kmi_id                //    2 bytes, offset 246
-    bool       (*poll)()             //    0 bytes, offset 248
-    bool       (*poll_modal_item)()  //    0 bytes, offset 248
-    void       *modal_items          //    8 bytes, offset 248
+    bool       (*poll)()             //    8 bytes, offset 248
+    bool       (*poll_modal_item)()  //    8 bytes, offset 256
+    void       *modal_items          //    8 bytes, offset 264
 struct wmKeyConfigPref // 88 bytes [#918]
     wmKeyConfigPref *next            //    8 bytes, offset 0
     wmKeyConfigPref *prev            //    8 bytes, offset 8
