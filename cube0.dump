@@ -222,7 +222,10 @@ b'DATA' block of size 376 at 1d106b23ae0 containing 1 objects of type wmWindow
     char event_queue_check_drag = b'\x01'
     char event_queue_check_drag_handled = b'\x00'
     char event_queue_consecutive_gesture_type = b'\x00'
-    int event_queue_consecutive_gesture_xy[2] // 8 bytes
+    int event_queue_consecutive_gesture_xy[2] = {  // 8 bytes
+      #0 = 825
+      #1 = 632
+    }
     wmEvent_ConsecutiveData *event_queue_consecutive_gesture_data = 0
     wmEvent *eventstate = 1d16f598b08
     wmEvent *event_last_handled = 1d106ab5688
@@ -4359,7 +4362,10 @@ b'DATA' block of size 1400 at 1d106b19d20 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -6723,7 +6729,10 @@ b'DATA' block of size 1400 at 1d106b19620 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -12344,7 +12353,10 @@ b'DATA' block of size 1400 at 1d106b18f20 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 0
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -18318,7 +18330,10 @@ b'DATA' block of size 1400 at 1d106b18820 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -20727,7 +20742,10 @@ b'DATA' block of size 1400 at 1d106adf920 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -25620,8 +25638,14 @@ b'DATA' block of size 10624 at 1d1079466a0 containing 1 objects of type SpaceIma
     int flag = 4608
     float uv_opacity = 1.0
     float stretch_opacity = 0.8999999761581421
-    int tile_grid_shape[2] // 8 bytes
-    int custom_grid_subdiv[2] // 8 bytes
+    int tile_grid_shape[2] = {  // 8 bytes
+      #0 = 1
+      #1 = 1
+    }
+    int custom_grid_subdiv[2] = {  // 8 bytes
+      #0 = 10
+      #1 = 10
+    }
     MaskSpaceInfo mask_info = { // 16 bytes
       Mask *mask = 0
       char draw_flag = b'\x04'
@@ -29147,7 +29171,10 @@ b'DATA' block of size 1400 at 1d106adf220 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -31852,7 +31879,10 @@ b'DATA' block of size 1400 at 1d106adeb20 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -36680,8 +36710,14 @@ b'DATA' block of size 10624 at 1d10794a6e0 containing 1 objects of type SpaceIma
     int flag = 4198912
     float uv_opacity = 1.0
     float stretch_opacity = 0.8999999761581421
-    int tile_grid_shape[2] // 8 bytes
-    int custom_grid_subdiv[2] // 8 bytes
+    int tile_grid_shape[2] = {  // 8 bytes
+      #0 = 1
+      #1 = 1
+    }
+    int custom_grid_subdiv[2] = {  // 8 bytes
+      #0 = 10
+      #1 = 10
+    }
     MaskSpaceInfo mask_info = { // 16 bytes
       Mask *mask = 0
       char draw_flag = b'\x04'
@@ -39113,7 +39149,10 @@ b'DATA' block of size 1400 at 1d106ade420 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -43843,8 +43882,14 @@ b'DATA' block of size 10624 at 1d10794e720 containing 1 objects of type SpaceIma
     int flag = 4198912
     float uv_opacity = 1.0
     float stretch_opacity = 0.8999999761581421
-    int tile_grid_shape[2] // 8 bytes
-    int custom_grid_subdiv[2] // 8 bytes
+    int tile_grid_shape[2] = {  // 8 bytes
+      #0 = 1
+      #1 = 1
+    }
+    int custom_grid_subdiv[2] = {  // 8 bytes
+      #0 = 10
+      #1 = 10
+    }
     MaskSpaceInfo mask_info = { // 16 bytes
       Mask *mask = 0
       char draw_flag = b'\x04'
@@ -45064,7 +45109,10 @@ b'DATA' block of size 1400 at 1d106addd20 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -49830,8 +49878,14 @@ b'DATA' block of size 10624 at 1d107952760 containing 1 objects of type SpaceIma
     int flag = 4198912
     float uv_opacity = 1.0
     float stretch_opacity = 0.8999999761581421
-    int tile_grid_shape[2] // 8 bytes
-    int custom_grid_subdiv[2] // 8 bytes
+    int tile_grid_shape[2] = {  // 8 bytes
+      #0 = 1
+      #1 = 1
+    }
+    int custom_grid_subdiv[2] = {  // 8 bytes
+      #0 = 10
+      #1 = 10
+    }
     MaskSpaceInfo mask_info = { // 16 bytes
       Mask *mask = 0
       char draw_flag = b'\x04'
@@ -50947,7 +51001,10 @@ b'DATA' block of size 1400 at 1d106add620 containing 1 objects of type View3D
     char _pad6[2] = b'' // + 2 bytes 
     int layact = 1
     short local_collections_uuid = 0
-    short _pad7[2] // 4 bytes
+    short _pad7[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     short debug_flag = 0
     short ob_centre_cursor = 0
     short scenelock = 1
@@ -51430,7 +51487,120 @@ b'SC\x00\x00' block of size 6744 at 1d106b0a060 containing 1 objects of type Sce
           float ymin = 0.0
           float ymax = 1.0
         }
-        CurveMap cm[4] // 320 bytes
+        CurveMap cm[4] = {  // 320 bytes
+          #0 = { // 80 bytes
+            short totpoint = 3
+            short flag = 1
+            float range = 256.0
+            float mintable = 0.0
+            float maxtable = 1.0
+            float ext_in[2] = {  // 8 bytes
+              #0 = -0.7071067690849304
+              #1 = -0.7071067690849304
+            }
+            float ext_out[2] = {  // 8 bytes
+              #0 = -0.7071068286895752
+              #1 = -0.7071068286895752
+            }
+            CurveMapPoint *curve = 1d106af5320
+            CurveMapPoint *table = 0
+            CurveMapPoint *premultable = 0
+            float premul_ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float premul_ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            short default_handle_type = 0
+            char _pad[6] = b'' // + 6 bytes 
+          }
+          #1 = { // 80 bytes
+            short totpoint = 0
+            short flag = 0
+            float range = 0.0
+            float mintable = 0.0
+            float maxtable = 0.0
+            float ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            CurveMapPoint *curve = 0
+            CurveMapPoint *table = 0
+            CurveMapPoint *premultable = 0
+            float premul_ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float premul_ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            short default_handle_type = 0
+            char _pad[6] = b'' // + 6 bytes 
+          }
+          #2 = { // 80 bytes
+            short totpoint = 0
+            short flag = 0
+            float range = 0.0
+            float mintable = 0.0
+            float maxtable = 0.0
+            float ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            CurveMapPoint *curve = 0
+            CurveMapPoint *table = 0
+            CurveMapPoint *premultable = 0
+            float premul_ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float premul_ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            short default_handle_type = 0
+            char _pad[6] = b'' // + 6 bytes 
+          }
+          #3 = { // 80 bytes
+            short totpoint = 0
+            short flag = 0
+            float range = 0.0
+            float mintable = 0.0
+            float maxtable = 0.0
+            float ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            CurveMapPoint *curve = 0
+            CurveMapPoint *table = 0
+            CurveMapPoint *premultable = 0
+            float premul_ext_in[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            float premul_ext_out[2] = {  // 8 bytes
+              #0 = 0.0
+              #1 = 0.0
+            }
+            short default_handle_type = 0
+            char _pad[6] = b'' // + 6 bytes 
+          }
+        }
         float black[3] = {  // 12 bytes
           #0 = 0.0
           #1 = 0.0
@@ -51478,7 +51648,32 @@ b'SC\x00\x00' block of size 6744 at 1d106b0a060 containing 1 objects of type Sce
       void *first = 0
       void *last = 0
     }
-    TransformOrientationSlot orientation_slots[4] // 64 bytes
+    TransformOrientationSlot orientation_slots[4] = {  // 64 bytes
+      #0 = { // 16 bytes
+        int type = 0
+        int index_custom = -1
+        char flag = b'\x00'
+        char _pad0[7] = b'' // + 7 bytes 
+      }
+      #1 = { // 16 bytes
+        int type = 0
+        int index_custom = -1
+        char flag = b'\x00'
+        char _pad0[7] = b'' // + 7 bytes 
+      }
+      #2 = { // 16 bytes
+        int type = 0
+        int index_custom = -1
+        char flag = b'\x00'
+        char _pad0[7] = b'' // + 7 bytes 
+      }
+      #3 = { // 16 bytes
+        int type = 0
+        int index_custom = -1
+        char flag = b'\x00'
+        char _pad0[7] = b'' // + 7 bytes 
+      }
+    }
     void *sound_scene = 0
     void *playback_handle = 0
     void *sound_scrub_handle = 0
@@ -51817,7 +52012,10 @@ b'DATA' block of size 1088 at 1d106adcf20 containing 1 objects of type ToolSetti
       short missing_data = 4
       short seam_bleed = 2
       short normal_angle = 80
-      short screen_grab_size[2] // 4 bytes
+      short screen_grab_size[2] = {  // 4 bytes
+        #0 = 512
+        #1 = 512
+      }
       int mode = 0
       Image *stencil = 0
       Image *clone = 0
@@ -51862,7 +52060,64 @@ b'DATA' block of size 1088 at 1d106adcf20 containing 1 objects of type ToolSetti
       short totrekey = 5
       short totaddkey = 5
       short brushtype = 0
-      ParticleBrushData brush[7] // 112 bytes
+      ParticleBrushData brush[7] = {  // 112 bytes
+        #0 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+        #1 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 1.0
+        }
+        #2 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+        #3 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+        #4 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+        #5 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+        #6 = { // 16 bytes
+          short size = 50
+          short step = 10
+          short invert = 0
+          short count = 10
+          int flag = 0
+          float strength = 0.5
+        }
+      }
       void *paintcursor = 0
       float emitterdist = 0.25
       char _pad0[4] = b'' // + 4 bytes 
@@ -52063,7 +52318,11 @@ b'DATA' block of size 136 at 1d106f3f7e0 containing 1 objects of type VPaint
     }
     char flag = b'\x00'
     char _pad[3] = b'' // + 3 bytes 
-    int radial_symm[3] // 12 bytes
+    int radial_symm[3] = {  // 12 bytes
+      #0 = 1
+      #1 = 1
+      #2 = 1
+    }
   }
 b'DATA' block of size 424 at 1d106b27020 containing 1 objects of type CurveMapping
   #0 = { // 424 bytes
@@ -52083,7 +52342,120 @@ b'DATA' block of size 424 at 1d106b27020 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34da0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52165,7 +52537,11 @@ b'DATA' block of size 136 at 1d106f3f5a0 containing 1 objects of type VPaint
     }
     char flag = b'\x00'
     char _pad[3] = b'' // + 3 bytes 
-    int radial_symm[3] // 12 bytes
+    int radial_symm[3] = {  // 12 bytes
+      #0 = 1
+      #1 = 1
+      #2 = 1
+    }
   }
 b'DATA' block of size 424 at 1d106b26e20 containing 1 objects of type CurveMapping
   #0 = { // 424 bytes
@@ -52185,7 +52561,120 @@ b'DATA' block of size 424 at 1d106b26e20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34d20
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52268,7 +52757,11 @@ b'DATA' block of size 216 at 1d106b1f020 containing 1 objects of type Sculpt
     int flags = 6144
     int transform_mode = 0
     int automasking_flags = 0
-    int radial_symm[3] // 12 bytes
+    int radial_symm[3] = {  // 12 bytes
+      #0 = 1
+      #1 = 1
+      #2 = 1
+    }
     float detail_size = 12.0
     int symmetrize_direction = 0
     float gravity_factor = 0.0
@@ -52303,7 +52796,120 @@ b'DATA' block of size 424 at 1d106b26c20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34ca0
+        CurveMapPoint *table = 1d106b110c8
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52358,7 +52964,120 @@ b'DATA' block of size 424 at 1d106b26a20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34c60
+        CurveMapPoint *table = 1d106b10108
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52413,7 +53132,120 @@ b'DATA' block of size 424 at 1d106b26820 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34c20
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52478,7 +53310,120 @@ b'DATA' block of size 424 at 1d106b26620 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34ba0
+        CurveMapPoint *table = 1d106b13048
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52569,7 +53514,120 @@ b'DATA' block of size 424 at 1d106b26420 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34b60
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52680,7 +53738,120 @@ b'DATA' block of size 424 at 1d106b26220 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34aa0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52781,7 +53952,120 @@ b'DATA' block of size 424 at 1d106b26020 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b34a20
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52882,7 +54166,120 @@ b'DATA' block of size 424 at 1d106b25e20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b349a0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -52947,7 +54344,120 @@ b'DATA' block of size 424 at 1d106b25c20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 7
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b2e820
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -53032,7 +54542,120 @@ b'DATA' block of size 424 at 1d106b25a20 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 3
+        short flag = 1
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106af5370
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -53160,7 +54783,120 @@ b'DATA' block of size 424 at 1d106b25820 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 0
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b348e0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 0
+        short flag = 0
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -54320,7 +56056,120 @@ b'DATA' block of size 424 at 1d106b25620 containing 1 objects of type CurveMappi
       float ymin = 0.0
       float ymax = 1.0
     }
-    CurveMap cm[4] // 320 bytes
+    CurveMap cm[4] = {  // 320 bytes
+      #0 = { // 80 bytes
+        short totpoint = 2
+        short flag = 1
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 1d106b34860
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #1 = { // 80 bytes
+        short totpoint = 2
+        short flag = 1
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 1d106b34820
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #2 = { // 80 bytes
+        short totpoint = 2
+        short flag = 1
+        float range = 0.0
+        float mintable = 0.0
+        float maxtable = 0.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        CurveMapPoint *curve = 1d106b347e0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+      #3 = { // 80 bytes
+        short totpoint = 2
+        short flag = 1
+        float range = 256.0
+        float mintable = 0.0
+        float maxtable = 1.0
+        float ext_in[2] = {  // 8 bytes
+          #0 = -0.7071067690849304
+          #1 = -0.7071067690849304
+        }
+        float ext_out[2] = {  // 8 bytes
+          #0 = -0.7071068286895752
+          #1 = -0.7071068286895752
+        }
+        CurveMapPoint *curve = 1d106b347a0
+        CurveMapPoint *table = 0
+        CurveMapPoint *premultable = 0
+        float premul_ext_in[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        float premul_ext_out[2] = {  // 8 bytes
+          #0 = 0.0
+          #1 = 0.0
+        }
+        short default_handle_type = 0
+        char _pad[6] = b'' // + 6 bytes 
+      }
+    }
     float black[3] = {  // 12 bytes
       #0 = 0.0
       #1 = 0.0
@@ -54461,7 +56310,9 @@ b'DATA' block of size 336 at 1d106ac9620 containing 1 objects of type ViewLayer
     }
     ViewLayerEEVEE eevee = { // 8 bytes
       int render_passes = 0
-      int _pad[1] // 4 bytes
+      int _pad[1] = {  // 4 bytes
+        #0 = 0
+      }
     }
     ListBase aovs = { // 16 bytes
       void *first = 0
@@ -54591,7 +56442,11 @@ b'DATA' block of size 64 at 1d106b737e0 containing 1 objects of type LayerCollec
       void *last = 1d106b73780
     }
     short local_collections_bits = -1
-    short _pad2[3] // 6 bytes
+    short _pad2[3] = {  // 6 bytes
+      #0 = 0
+      #1 = 0
+      #2 = 0
+    }
   }
 b'DATA' block of size 64 at 1d106b73780 containing 1 objects of type LayerCollection
   #0 = { // 64 bytes
@@ -54607,7 +56462,11 @@ b'DATA' block of size 64 at 1d106b73780 containing 1 objects of type LayerCollec
       void *last = 0
     }
     short local_collections_bits = -1
-    short _pad2[3] // 6 bytes
+    short _pad2[3] = {  // 6 bytes
+      #0 = 0
+      #1 = 0
+      #2 = 0
+    }
   }
 b'DATA' block of size 376 at 1d106b202e0 containing 1 objects of type Collection
   #0 = { // 376 bytes
@@ -54697,7 +56556,11 @@ b'DATA' block of size 32 at 1d106b34760 containing 1 objects of type CollectionC
     Collection *collection = 1d106b20120
     CollectionLightLinking light_linking = { // 4 bytes
       uchar link_state = // 1 bytes
-      uchar _pad[3] // 3 bytes
+      uchar _pad[3] = {  // 3 bytes
+        #0 = // 3 bytes
+        #1 = // 3 bytes
+        #2 = // 3 bytes
+      }
     }
     int _pad = 0
   }
@@ -56149,7 +58012,11 @@ b'DATA' block of size 32 at 1d106ef5e78 containing 1 objects of type CollectionO
     Object *ob = 1d10736a408
     CollectionLightLinking light_linking = { // 4 bytes
       uchar link_state = // 1 bytes
-      uchar _pad[3] // 3 bytes
+      uchar _pad[3] = {  // 3 bytes
+        #0 = // 3 bytes
+        #1 = // 3 bytes
+        #2 = // 3 bytes
+      }
     }
     int _pad = 0
   }
@@ -56482,7 +58349,61 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     int *poly_offset_indices = 1d106ef5c98
     CustomData vdata = { // 248 bytes
       CustomDataLayer *layers = 1d106f05088
-      int typemap[53] // 212 bytes
+      int typemap[53] = {  // 212 bytes
+        #0 = -1
+        #1 = -1
+        #2 = -1
+        #3 = -1
+        #4 = -1
+        #5 = -1
+        #6 = -1
+        #7 = -1
+        #8 = -1
+        #9 = -1
+        #10 = -1
+        #11 = -1
+        #12 = -1
+        #13 = -1
+        #14 = -1
+        #15 = -1
+        #16 = -1
+        #17 = -1
+        #18 = -1
+        #19 = -1
+        #20 = -1
+        #21 = -1
+        #22 = -1
+        #23 = -1
+        #24 = -1
+        #25 = -1
+        #26 = -1
+        #27 = -1
+        #28 = -1
+        #29 = -1
+        #30 = -1
+        #31 = -1
+        #32 = -1
+        #33 = -1
+        #34 = -1
+        #35 = -1
+        #36 = -1
+        #37 = -1
+        #38 = -1
+        #39 = -1
+        #40 = -1
+        #41 = -1
+        #42 = -1
+        #43 = -1
+        #44 = -1
+        #45 = -1
+        #46 = -1
+        #47 = -1
+        #48 = 0
+        #49 = -1
+        #50 = 1
+        #51 = -1
+        #52 = -1
+      }
       int totlayer = 2
       int maxlayer = 2
       int totsize = 13
@@ -56491,7 +58412,61 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     }
     CustomData edata = { // 248 bytes
       CustomDataLayer *layers = 1d106f05588
-      int typemap[53] // 212 bytes
+      int typemap[53] = {  // 212 bytes
+        #0 = -1
+        #1 = -1
+        #2 = -1
+        #3 = -1
+        #4 = -1
+        #5 = -1
+        #6 = -1
+        #7 = -1
+        #8 = -1
+        #9 = -1
+        #10 = -1
+        #11 = -1
+        #12 = -1
+        #13 = -1
+        #14 = -1
+        #15 = -1
+        #16 = -1
+        #17 = -1
+        #18 = -1
+        #19 = -1
+        #20 = -1
+        #21 = -1
+        #22 = -1
+        #23 = -1
+        #24 = -1
+        #25 = -1
+        #26 = -1
+        #27 = -1
+        #28 = -1
+        #29 = -1
+        #30 = -1
+        #31 = -1
+        #32 = -1
+        #33 = -1
+        #34 = -1
+        #35 = -1
+        #36 = -1
+        #37 = -1
+        #38 = -1
+        #39 = -1
+        #40 = -1
+        #41 = -1
+        #42 = -1
+        #43 = -1
+        #44 = -1
+        #45 = -1
+        #46 = 0
+        #47 = -1
+        #48 = -1
+        #49 = -1
+        #50 = 1
+        #51 = -1
+        #52 = -1
+      }
       int totlayer = 2
       int maxlayer = 2
       int totsize = 9
@@ -56500,7 +58475,61 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     }
     CustomData pdata = { // 248 bytes
       CustomDataLayer *layers = 1d106f04908
-      int typemap[53] // 212 bytes
+      int typemap[53] = {  // 212 bytes
+        #0 = -1
+        #1 = -1
+        #2 = -1
+        #3 = -1
+        #4 = -1
+        #5 = -1
+        #6 = -1
+        #7 = -1
+        #8 = -1
+        #9 = -1
+        #10 = -1
+        #11 = -1
+        #12 = -1
+        #13 = -1
+        #14 = -1
+        #15 = -1
+        #16 = -1
+        #17 = -1
+        #18 = -1
+        #19 = -1
+        #20 = -1
+        #21 = -1
+        #22 = -1
+        #23 = -1
+        #24 = -1
+        #25 = -1
+        #26 = -1
+        #27 = -1
+        #28 = -1
+        #29 = -1
+        #30 = -1
+        #31 = -1
+        #32 = -1
+        #33 = -1
+        #34 = -1
+        #35 = -1
+        #36 = -1
+        #37 = -1
+        #38 = -1
+        #39 = -1
+        #40 = -1
+        #41 = -1
+        #42 = -1
+        #43 = -1
+        #44 = -1
+        #45 = -1
+        #46 = -1
+        #47 = -1
+        #48 = -1
+        #49 = -1
+        #50 = 0
+        #51 = -1
+        #52 = -1
+      }
       int totlayer = 2
       int maxlayer = 2
       int totsize = 2
@@ -56509,7 +58538,61 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     }
     CustomData ldata = { // 248 bytes
       CustomDataLayer *layers = 1d106f05308
-      int typemap[53] // 212 bytes
+      int typemap[53] = {  // 212 bytes
+        #0 = -1
+        #1 = -1
+        #2 = -1
+        #3 = -1
+        #4 = -1
+        #5 = -1
+        #6 = -1
+        #7 = -1
+        #8 = -1
+        #9 = -1
+        #10 = -1
+        #11 = 0
+        #12 = -1
+        #13 = -1
+        #14 = -1
+        #15 = -1
+        #16 = -1
+        #17 = -1
+        #18 = -1
+        #19 = -1
+        #20 = -1
+        #21 = -1
+        #22 = -1
+        #23 = -1
+        #24 = -1
+        #25 = -1
+        #26 = -1
+        #27 = -1
+        #28 = -1
+        #29 = -1
+        #30 = -1
+        #31 = -1
+        #32 = -1
+        #33 = -1
+        #34 = -1
+        #35 = -1
+        #36 = -1
+        #37 = -1
+        #38 = -1
+        #39 = -1
+        #40 = -1
+        #41 = -1
+        #42 = -1
+        #43 = -1
+        #44 = -1
+        #45 = -1
+        #46 = -1
+        #47 = -1
+        #48 = -1
+        #49 = 2
+        #50 = -1
+        #51 = -1
+        #52 = -1
+      }
       int totlayer = 3
       int maxlayer = 3
       int totsize = 16
@@ -56564,7 +58647,61 @@ b'ME\x00\x00' block of size 1712 at 1d107369608 containing 1 objects of type Mes
     MFace *mface = 0
     CustomData fdata = { // 248 bytes
       CustomDataLayer *layers = 0
-      int typemap[53] // 212 bytes
+      int typemap[53] = {  // 212 bytes
+        #0 = 0
+        #1 = 0
+        #2 = 0
+        #3 = 0
+        #4 = 0
+        #5 = 0
+        #6 = 0
+        #7 = 0
+        #8 = 0
+        #9 = 0
+        #10 = 0
+        #11 = 0
+        #12 = 0
+        #13 = 0
+        #14 = 0
+        #15 = 0
+        #16 = 0
+        #17 = 0
+        #18 = 0
+        #19 = 0
+        #20 = 0
+        #21 = 0
+        #22 = 0
+        #23 = 0
+        #24 = 0
+        #25 = 0
+        #26 = 0
+        #27 = 0
+        #28 = 0
+        #29 = 0
+        #30 = 0
+        #31 = 0
+        #32 = 0
+        #33 = 0
+        #34 = 0
+        #35 = 0
+        #36 = 0
+        #37 = 0
+        #38 = 0
+        #39 = 0
+        #40 = 0
+        #41 = 0
+        #42 = 0
+        #43 = 0
+        #44 = 0
+        #45 = 0
+        #46 = 0
+        #47 = 0
+        #48 = 0
+        #49 = 0
+        #50 = 0
+        #51 = 0
+        #52 = 0
+      }
       int totlayer = 0
       int maxlayer = 0
       int totsize = 0
@@ -57638,10 +59775,22 @@ b'DATA' block of size 56 at 1d106b73720 containing 1 objects of type bNodeLink
   }
 b'DATA' block of size 48 at 1d106af52d0 containing 1 objects of type PreviewImage
   #0 = { // 48 bytes
-    int w[2] // 8 bytes
-    int h[2] // 8 bytes
-    short flag[2] // 4 bytes
-    short changed_timestamp[2] // 4 bytes
+    int w[2] = {  // 8 bytes
+      #0 = 0
+      #1 = 0
+    }
+    int h[2] = {  // 8 bytes
+      #0 = 0
+      #1 = 0
+    }
+    short flag[2] = {  // 4 bytes
+      #0 = 1
+      #1 = 1
+    }
+    short changed_timestamp[2] = {  // 4 bytes
+      #0 = 1
+      #1 = 1
+    }
     int *rect[2] = 0
     PreviewImageRuntimeHandle *runtime = 0
   }
@@ -57861,10 +60010,22 @@ b'IM\x00\x00' block of size 1600 at 1d106aaa420 containing 1 objects of type Ima
   }
 b'DATA' block of size 48 at 1d106af5230 containing 1 objects of type PreviewImage
   #0 = { // 48 bytes
-    int w[2] // 8 bytes
-    int h[2] // 8 bytes
-    short flag[2] // 4 bytes
-    short changed_timestamp[2] // 4 bytes
+    int w[2] = {  // 8 bytes
+      #0 = 32
+      #1 = 0
+    }
+    int h[2] = {  // 8 bytes
+      #0 = 32
+      #1 = 0
+    }
+    short flag[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 1
+    }
+    short changed_timestamp[2] = {  // 4 bytes
+      #0 = 0
+      #1 = 0
+    }
     int *rect[2] = 1d106a95620
     PreviewImageRuntimeHandle *runtime = 0
   }
@@ -57886,8 +60047,14 @@ b'DATA' block of size 136 at 1d106f3fba0 containing 1 objects of type ImageTile
     ImageTile_Runtime runtime = { // 24 bytes
       int tilearray_layer = 0
       int _pad = 0
-      int tilearray_offset[2] // 8 bytes
-      int tilearray_size[2] // 8 bytes
+      int tilearray_offset[2] = {  // 8 bytes
+        #0 = 0
+        #1 = 0
+      }
+      int tilearray_size[2] = {  // 8 bytes
+        #0 = 0
+        #1 = 0
+      }
     }
     int tile_number = 1001
     int gen_x = 1024
