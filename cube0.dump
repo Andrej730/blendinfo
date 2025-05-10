@@ -4493,7 +4493,7 @@ b'DATA' block of size 1400 at 1d106b19d20 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -6860,7 +6860,7 @@ b'DATA' block of size 1400 at 1d106b19620 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -12484,7 +12484,7 @@ b'DATA' block of size 1400 at 1d106b18f20 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -18461,7 +18461,7 @@ b'DATA' block of size 1400 at 1d106b18820 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -20873,7 +20873,7 @@ b'DATA' block of size 1400 at 1d106adf920 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -29302,7 +29302,7 @@ b'DATA' block of size 1400 at 1d106adf220 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -32010,7 +32010,7 @@ b'DATA' block of size 1400 at 1d106adeb20 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -39280,7 +39280,7 @@ b'DATA' block of size 1400 at 1d106ade420 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -45240,7 +45240,7 @@ b'DATA' block of size 1400 at 1d106addd20 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
@@ -51132,7 +51132,7 @@ b'DATA' block of size 1400 at 1d106add620 containing 1 objects of type View3D
     }
     View3D_Runtime runtime = { // 32 bytes
       void *properties_storage = 0
-      void (*properties_storage_free)() = // 0 bytes
+      void (*properties_storage_free)() = // 0 bytes (unparsed type)
       int flag = 0
       char _pad1[4] = b'' // + 4 bytes 
       SceneStats *local_stats = 0
