@@ -148,8 +148,8 @@ struct PreviewImage // 48 bytes [#20]
     int        h[2]                  //    8 bytes, offset 8
     short      flag[2]               //    4 bytes, offset 16
     short      changed_timestamp[2]  //    4 bytes, offset 20
-    int        *rect[2]              //    8 bytes, offset 24
-    PreviewImageRuntimeHandle *runtime //    8 bytes, offset 32
+    int        *rect[2]              //   16 bytes, offset 24
+    PreviewImageRuntimeHandle *runtime //    8 bytes, offset 40
 struct bMotionPathVert // 16 bytes [#21]
     float      co[3]                 //   12 bytes, offset 0
     int        flag                  //    4 bytes, offset 12
@@ -2255,12 +2255,12 @@ struct FluidDomainSettings // 2288 bytes [#171]
     char       _pad11[7]             //    7 bytes, offset 2209
     int        viewsettings          //    4 bytes, offset 2216
     char       _pad12[4]             //    4 bytes, offset 2220
-    PointCache *point_cache[2]       //    8 bytes, offset 2224
-    ListBase   ptcaches[2]           //   32 bytes, offset 2232
-    int        cache_comp            //    4 bytes, offset 2264
-    int        cache_high_comp       //    4 bytes, offset 2268
-    char       cache_file_format     //    1 bytes, offset 2272
-    char       _pad13[7]             //    7 bytes, offset 2273
+    PointCache *point_cache[2]       //   16 bytes, offset 2224
+    ListBase   ptcaches[2]           //   32 bytes, offset 2240
+    int        cache_comp            //    4 bytes, offset 2272
+    int        cache_high_comp       //    4 bytes, offset 2276
+    char       cache_file_format     //    1 bytes, offset 2280
+    char       _pad13[7]             //    7 bytes, offset 2281
 struct FluidFlowSettings // 216 bytes [#172]
     FluidModifierData *fmd           //    8 bytes, offset 0
     Mesh       *mesh                 //    8 bytes, offset 8
@@ -3145,45 +3145,45 @@ struct Image // 1600 bytes, is ID [#242]
     DrawDataList drawdata            //   16 bytes, offset 216
     char       name[1024]            // 1024 bytes, offset 232
     MovieCache *cache                //    8 bytes, offset 1256
-    GPUTexture *gputexture[3][2]     //    8 bytes, offset 1264
-    ListBase   anims                 //   16 bytes, offset 1272
-    RenderResult *rr                 //    8 bytes, offset 1288
-    ListBase   renderslots           //   16 bytes, offset 1296
-    short      render_slot           //    2 bytes, offset 1312
-    short      last_render_slot      //    2 bytes, offset 1314
-    int        flag                  //    4 bytes, offset 1316
-    short      source                //    2 bytes, offset 1320
-    short      type                  //    2 bytes, offset 1322
-    int        lastframe             //    4 bytes, offset 1324
-    int        gpuframenr            //    4 bytes, offset 1328
-    short      gpuflag               //    2 bytes, offset 1332
-    short      gpu_pass              //    2 bytes, offset 1334
-    short      gpu_layer             //    2 bytes, offset 1336
-    short      gpu_view              //    2 bytes, offset 1338
-    short      seam_margin           //    2 bytes, offset 1340
-    char       _pad2[2]              //    2 bytes, offset 1342
-    PackedFile *packedfile           //    8 bytes, offset 1344
-    ListBase   packedfiles           //   16 bytes, offset 1352
-    PreviewImage *preview            //    8 bytes, offset 1368
-    int        lastused              //    4 bytes, offset 1376
-    int        gen_x                 //    4 bytes, offset 1380
-    int        gen_y                 //    4 bytes, offset 1384
-    char       gen_type              //    1 bytes, offset 1388
-    char       gen_flag              //    1 bytes, offset 1389
-    short      gen_depth             //    2 bytes, offset 1390
-    float      gen_color[4]          //   16 bytes, offset 1392
-    float      aspx                  //    4 bytes, offset 1408
-    float      aspy                  //    4 bytes, offset 1412
-    ColorManagedColorspaceSettings colorspace_settings //   64 bytes, offset 1416
-    char       alpha_mode            //    1 bytes, offset 1480
-    char       _pad                  //    1 bytes, offset 1481
-    char       eye                   //    1 bytes, offset 1482
-    char       views_format          //    1 bytes, offset 1483
-    int        active_tile_index     //    4 bytes, offset 1484
-    ListBase   tiles                 //   16 bytes, offset 1488
-    ListBase   views                 //   16 bytes, offset 1504
-    Stereo3dFormat *stereo3d_format  //    8 bytes, offset 1520
-    Image_Runtime runtime            //   32 bytes, offset 1528
+    GPUTexture *gputexture[3][2]     //   48 bytes, offset 1264
+    ListBase   anims                 //   16 bytes, offset 1312
+    RenderResult *rr                 //    8 bytes, offset 1328
+    ListBase   renderslots           //   16 bytes, offset 1336
+    short      render_slot           //    2 bytes, offset 1352
+    short      last_render_slot      //    2 bytes, offset 1354
+    int        flag                  //    4 bytes, offset 1356
+    short      source                //    2 bytes, offset 1360
+    short      type                  //    2 bytes, offset 1362
+    int        lastframe             //    4 bytes, offset 1364
+    int        gpuframenr            //    4 bytes, offset 1368
+    short      gpuflag               //    2 bytes, offset 1372
+    short      gpu_pass              //    2 bytes, offset 1374
+    short      gpu_layer             //    2 bytes, offset 1376
+    short      gpu_view              //    2 bytes, offset 1378
+    short      seam_margin           //    2 bytes, offset 1380
+    char       _pad2[2]              //    2 bytes, offset 1382
+    PackedFile *packedfile           //    8 bytes, offset 1384
+    ListBase   packedfiles           //   16 bytes, offset 1392
+    PreviewImage *preview            //    8 bytes, offset 1408
+    int        lastused              //    4 bytes, offset 1416
+    int        gen_x                 //    4 bytes, offset 1420
+    int        gen_y                 //    4 bytes, offset 1424
+    char       gen_type              //    1 bytes, offset 1428
+    char       gen_flag              //    1 bytes, offset 1429
+    short      gen_depth             //    2 bytes, offset 1430
+    float      gen_color[4]          //   16 bytes, offset 1432
+    float      aspx                  //    4 bytes, offset 1448
+    float      aspy                  //    4 bytes, offset 1452
+    ColorManagedColorspaceSettings colorspace_settings //   64 bytes, offset 1456
+    char       alpha_mode            //    1 bytes, offset 1520
+    char       _pad                  //    1 bytes, offset 1521
+    char       eye                   //    1 bytes, offset 1522
+    char       views_format          //    1 bytes, offset 1523
+    int        active_tile_index     //    4 bytes, offset 1524
+    ListBase   tiles                 //   16 bytes, offset 1528
+    ListBase   views                 //   16 bytes, offset 1544
+    Stereo3dFormat *stereo3d_format  //    8 bytes, offset 1560
+    Image_Runtime runtime            //   32 bytes, offset 1568
 struct IpoDriver // 144 bytes [#243]
     Object     *ob                   //    8 bytes, offset 0
     short      blocktype             //    2 bytes, offset 8
@@ -3812,12 +3812,12 @@ struct FreestyleLineStyle // 552 bytes, is ID [#310]
     short      dash3                 //    2 bytes, offset 328
     short      gap3                  //    2 bytes, offset 330
     int        panel                 //    4 bytes, offset 332
-    MTex       *mtex[18]             //    8 bytes, offset 336
-    bNodeTree  *nodetree             //    8 bytes, offset 344
-    ListBase   color_modifiers       //   16 bytes, offset 352
-    ListBase   alpha_modifiers       //   16 bytes, offset 368
-    ListBase   thickness_modifiers   //   16 bytes, offset 384
-    ListBase   geometry_modifiers    //   16 bytes, offset 400
+    MTex       *mtex[18]             //  144 bytes, offset 336
+    bNodeTree  *nodetree             //    8 bytes, offset 480
+    ListBase   color_modifiers       //   16 bytes, offset 488
+    ListBase   alpha_modifiers       //   16 bytes, offset 504
+    ListBase   thickness_modifiers   //   16 bytes, offset 520
+    ListBase   geometry_modifiers    //   16 bytes, offset 536
 struct Link // 16 bytes [#311]
     Link       *next                 //    8 bytes, offset 0
     Link       *prev                 //    8 bytes, offset 8
@@ -4311,15 +4311,15 @@ struct DisplaceModifierData // 368 bytes [#365]
     char       _pad2[6]              //    6 bytes, offset 362
 struct UVProjectModifierData // 296 bytes [#366]
     ModifierData modifier            //  120 bytes, offset 0
-    Object     *projectors[10]       //    8 bytes, offset 120
-    char       _pad2[4]              //    4 bytes, offset 128
-    int        num_projectors        //    4 bytes, offset 132
-    float      aspectx               //    4 bytes, offset 136
-    float      aspecty               //    4 bytes, offset 140
-    float      scalex                //    4 bytes, offset 144
-    float      scaley                //    4 bytes, offset 148
-    char       uvlayer_name[68]      //   68 bytes, offset 152
-    int        uvlayer_tmp           //    4 bytes, offset 220
+    Object     *projectors[10]       //   80 bytes, offset 120
+    char       _pad2[4]              //    4 bytes, offset 200
+    int        num_projectors        //    4 bytes, offset 204
+    float      aspectx               //    4 bytes, offset 208
+    float      aspecty               //    4 bytes, offset 212
+    float      scalex                //    4 bytes, offset 216
+    float      scaley                //    4 bytes, offset 220
+    char       uvlayer_name[68]      //   68 bytes, offset 224
+    int        uvlayer_tmp           //    4 bytes, offset 292
 struct DecimateModifierData // 208 bytes [#367]
     ModifierData modifier            //  120 bytes, offset 0
     float      percent               //    4 bytes, offset 120
@@ -5340,7 +5340,7 @@ struct MovieClip_RuntimeGPUTexture // 48 bytes [#458]
     void       *next                 //    8 bytes, offset 0
     void       *prev                 //    8 bytes, offset 8
     MovieClipUser user               //    8 bytes, offset 16
-    GPUTexture *gputexture[3]        //    8 bytes, offset 24
+    GPUTexture *gputexture[3]        //   24 bytes, offset 24
 struct MovieClip_Runtime // 16 bytes [#459]
     ListBase   gputextures           //   16 bytes, offset 0
 struct MovieClip // 2568 bytes, is ID [#460]
@@ -6848,27 +6848,27 @@ struct ParticleSettings // 968 bytes, is ID [#671]
     CurveMapping *roughcurve         //    8 bytes, offset 688
     float      clump_noise_size      //    4 bytes, offset 696
     float      bending_random        //    4 bytes, offset 700
-    MTex       *mtex[18]             //    8 bytes, offset 704
-    Collection *dup_group            //    8 bytes, offset 712
-    ListBase   dupliweights          //   16 bytes, offset 720
-    Collection *force_group          //    8 bytes, offset 736
-    Object     *dup_ob               //    8 bytes, offset 744
-    Object     *bb_ob                //    8 bytes, offset 752
-    Ipo        *ipo                  //    8 bytes, offset 760
-    PartDeflect *pd                  //    8 bytes, offset 768
-    PartDeflect *pd2                 //    8 bytes, offset 776
-    short      use_modifier_stack    //    2 bytes, offset 784
-    char       _pad5[2]              //    2 bytes, offset 786
-    short      shape_flag            //    2 bytes, offset 788
-    char       _pad6[2]              //    2 bytes, offset 790
-    float      twist                 //    4 bytes, offset 792
-    char       _pad8[4]              //    4 bytes, offset 796
-    float      shape                 //    4 bytes, offset 800
-    float      rad_root              //    4 bytes, offset 804
-    float      rad_tip               //    4 bytes, offset 808
-    float      rad_scale             //    4 bytes, offset 812
-    CurveMapping *twistcurve         //    8 bytes, offset 816
-    void       *_pad7                //    8 bytes, offset 824
+    MTex       *mtex[18]             //  144 bytes, offset 704
+    Collection *dup_group            //    8 bytes, offset 848
+    ListBase   dupliweights          //   16 bytes, offset 856
+    Collection *force_group          //    8 bytes, offset 872
+    Object     *dup_ob               //    8 bytes, offset 880
+    Object     *bb_ob                //    8 bytes, offset 888
+    Ipo        *ipo                  //    8 bytes, offset 896
+    PartDeflect *pd                  //    8 bytes, offset 904
+    PartDeflect *pd2                 //    8 bytes, offset 912
+    short      use_modifier_stack    //    2 bytes, offset 920
+    char       _pad5[2]              //    2 bytes, offset 922
+    short      shape_flag            //    2 bytes, offset 924
+    char       _pad6[2]              //    2 bytes, offset 926
+    float      twist                 //    4 bytes, offset 928
+    char       _pad8[4]              //    4 bytes, offset 932
+    float      shape                 //    4 bytes, offset 936
+    float      rad_root              //    4 bytes, offset 940
+    float      rad_tip               //    4 bytes, offset 944
+    float      rad_scale             //    4 bytes, offset 948
+    CurveMapping *twistcurve         //    8 bytes, offset 952
+    void       *_pad7                //    8 bytes, offset 960
 struct ParticleSystem // 696 bytes [#672]
     ParticleSystem *next             //    8 bytes, offset 0
     ParticleSystem *prev             //    8 bytes, offset 8
@@ -6938,8 +6938,8 @@ struct PTCacheMem // 112 bytes [#674]
     int        totpoint              //    4 bytes, offset 20
     int        data_types            //    4 bytes, offset 24
     int        flag                  //    4 bytes, offset 28
-    void       *data[8]              //    8 bytes, offset 32
-    ListBase   extradata             //   16 bytes, offset 40
+    void       *data[8]              //   64 bytes, offset 32
+    ListBase   extradata             //   16 bytes, offset 96
 struct PointCache // 1392 bytes [#675]
     PointCache *next                 //    8 bytes, offset 0
     PointCache *prev                 //    8 bytes, offset 8

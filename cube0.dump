@@ -59791,7 +59791,10 @@ b'DATA' block of size 48 at 1d106af52d0 containing 1 objects of type PreviewImag
       #0 = 1
       #1 = 1
     }
-    int *rect[2] = 0
+    int *rect[2] = {  // 16 bytes
+      #0 = 0
+      #1 = 0
+    }
     PreviewImageRuntimeHandle *runtime = 0
   }
 b'LS\x00\x00' block of size 552 at 1d106ac15a0 containing 1 objects of type FreestyleLineStyle
@@ -59865,7 +59868,26 @@ b'LS\x00\x00' block of size 552 at 1d106ac15a0 containing 1 objects of type Free
     short dash3 = 0
     short gap3 = 0
     int panel = 1
-    MTex *mtex[18] = 0
+    MTex *mtex[18] = {  // 144 bytes
+      #0 = 0
+      #1 = 0
+      #2 = 0
+      #3 = 0
+      #4 = 0
+      #5 = 0
+      #6 = 0
+      #7 = 0
+      #8 = 0
+      #9 = 0
+      #10 = 0
+      #11 = 0
+      #12 = 0
+      #13 = 0
+      #14 = 0
+      #15 = 0
+      #16 = 0
+      #17 = 0
+    }
     bNodeTree *nodetree = 0
     ListBase color_modifiers = { // 16 bytes
       void *first = 0
@@ -59880,8 +59902,8 @@ b'LS\x00\x00' block of size 552 at 1d106ac15a0 containing 1 objects of type Free
       void *last = 0
     }
     ListBase geometry_modifiers = { // 16 bytes
-      void *first = 0
-      void *last = 0
+      void *first = 1d1070edb40
+      void *last = 1d1070edb40
     }
   }
 b'DATA' block of size 104 at 1d1070edb40 containing 1 objects of type LineStyleGeometryModifier_Sampling
@@ -59938,39 +59960,46 @@ b'IM\x00\x00' block of size 1600 at 1d106aaa420 containing 1 objects of type Ima
     }
     char name[1024] = b'' // + 1024 bytes 
     MovieCache *cache = 0
-    GPUTexture *gputexture[3][2] = 0
+    GPUTexture *gputexture[3][2] = {  // 48 bytes
+      #0,0 = 0
+      #0,1 = 0
+      #1,0 = 0
+      #1,1 = 0
+      #2,0 = 0
+      #2,1 = 0
+    }
     ListBase anims = { // 16 bytes
       void *first = 0
       void *last = 0
     }
     RenderResult *rr = 0
     ListBase renderslots = { // 16 bytes
-      void *first = 0
-      void *last = 0
+      void *first = 1d106ab66a0
+      void *last = 1d106ab6320
     }
     short render_slot = 0
     short last_render_slot = 0
-    int flag = 0
-    short source = 0
-    short type = 0
+    int flag = 2048
+    short source = 5
+    short type = 4
     int lastframe = 0
-    int gpuframenr = 0
+    int gpuframenr = 2147483647
     short gpuflag = 0
-    short gpu_pass = 0
-    short gpu_layer = 26272
-    short gpu_view = 1707
-    short seam_margin = 465
+    short gpu_pass = 32767
+    short gpu_layer = 32767
+    short gpu_view = 32767
+    short seam_margin = 8
     char _pad2[2] = b'' // + 2 bytes 
-    PackedFile *packedfile = 1d106ab6320
+    PackedFile *packedfile = 0
     ListBase packedfiles = { // 16 bytes
-      void *first = 80000000000
-      void *last = 40005
+      void *first = 0
+      void *last = 0
     }
-    PreviewImage *preview = 7fff00007fffffff
-    int lastused = 2147450879
-    int gen_x = 8
-    int gen_y = 0
-    char gen_type = b'\x00'
+    PreviewImage *preview = 1d106af5230
+    int lastused = 0
+    int gen_x = 1024
+    int gen_y = 1024
+    char gen_type = b'\x01'
     char gen_flag = b'\x00'
     short gen_depth = 0
     float gen_color[4] = {  // 16 bytes
@@ -59979,8 +60008,8 @@ b'IM\x00\x00' block of size 1600 at 1d106aaa420 containing 1 objects of type Ima
       #2 = 0.0
       #3 = 0.0
     }
-    float aspx = 6.594844732349586e-35
-    float aspy = 6.516037859110399e-43
+    float aspx = 1.0
+    float aspy = 1.0
     ColorManagedColorspaceSettings colorspace_settings = { // 64 bytes
       char name[64] = b'' // + 64 bytes 
     }
@@ -59990,17 +60019,17 @@ b'IM\x00\x00' block of size 1600 at 1d106aaa420 containing 1 objects of type Ima
     char views_format = b'\x00'
     int active_tile_index = 0
     ListBase tiles = { // 16 bytes
-      void *first = 0
-      void *last = 0
+      void *first = 1d106f3fba0
+      void *last = 1d106f3fba0
     }
     ListBase views = { // 16 bytes
       void *first = 0
       void *last = 0
     }
-    Stereo3dFormat *stereo3d_format = 0
+    Stereo3dFormat *stereo3d_format = 1d1070bcc90
     Image_Runtime runtime = { // 32 bytes
-      void *cache_mutex = 1d106f3fba0
-      PartialUpdateRegister *partial_update_register = 1d106f3fba0
+      void *cache_mutex = 1d1064aa058
+      PartialUpdateRegister *partial_update_register = 0
       PartialUpdateUser *partial_update_user = 0
       float backdrop_offset[2] = {  // 8 bytes
         #0 = 0.0
@@ -60026,7 +60055,10 @@ b'DATA' block of size 48 at 1d106af5230 containing 1 objects of type PreviewImag
       #0 = 0
       #1 = 0
     }
-    int *rect[2] = 1d106a95620
+    int *rect[2] = {  // 16 bytes
+      #0 = 1d106a95620
+      #1 = 0
+    }
     PreviewImageRuntimeHandle *runtime = 0
   }
 b'DATA' block of size 4096 at 1d106a95620
