@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
+import math
 import struct
 import sys
-import math
+from collections.abc import Generator
 from functools import cache
-from typing import List, Tuple, IO, Dict
+from typing import IO, Any, Dict, List, NamedTuple, Tuple
+
+from numpy import block
 
 TypeInf = Tuple[str, int]
 
@@ -24,7 +29,7 @@ class DNAField:
 			self.is_ptr = True
 		else:
 			self.is_ptr = False
-	
+
 		while name.endswith("]"):
 			openbrace = name.index('[')
 			closebrace = name.index(']')
@@ -33,7 +38,7 @@ class DNAField:
 			self.size *= dim
 			name = name[:openbrace] + name[closebrace + 1:]
 
-	def __str__(self):
+	def __str__(self) -> str:
 		decl = "{:10} {}".format(self.typeinf[0], self.orig_name)
 		return "{:32} // {:4} bytes, offset {}".format(decl, self.size, self.offset)
 
@@ -45,7 +50,7 @@ class DNAStruct:
 		self.fields = fields
 		self.is_id = len(fields) > 0 and fields[0].orig_name == "id"
 
-	def __str__(self):
+	def __str__(self) -> str:
 		return "struct {} // {} bytes{}".format(self.name, self.size, ", is ID" if self.is_id else "")
 
 
@@ -60,52 +65,130 @@ def unravel_array_index(i: int, shape: tuple[int, ...]) -> str:
 	return array_index
 
 
-class BlendFile:
-	def __init__(self, blend_file: IO):
-		self.file = blend_file
-		header = self.file.read(12)
-		if not header.startswith(b'BLENDER'):
-			raise ValueError("Not a .blend file (header: {}".format(header))
-		self.PTR_SIZE = 4 if header[7] == b'_' else 8
-		bigend = header[8] == b'V'
-		self.PTR = 'Q' if self.PTR_SIZE == 8 else 'I'
-		self.EF = '>' if bigend else '<'
-		self.HEADER_SIZE = 16 + self.PTR_SIZE
+class BlockHeader(NamedTuple):
+	block: bytes
+	size: int
+	oldptr: int
+	idx: int
+	cnt: int
 
-	def __str__(self):
+
+class BlockHeaderType:
+	def __init__(self, use_old_header: bool, ptr: str):
+		# BLO_core_bhead.hh
+		if use_old_header:
+			# SmallHead.
+			struct_members = {
+				"block": "4s",
+				"size": "i",
+				"oldptr": f"{ptr}",
+				"idx": "i",
+				"cnt": "i",
+			}
+		else:
+			# LargeHead.
+			struct_members = {
+				"block": "4s",
+				"idx": "i",
+				"oldptr": f"{ptr}",
+				"size": "q",
+				"cnt": "q",
+			}
+
+		self.fmt = "".join(struct_members.values())
+		self.members = list(struct_members.keys())
+		self.header_size = struct.calcsize(self.fmt)
+
+	def read(self, blend_file: BlendFile) -> BlockHeader:
+		header = blend_file.file.read(self.header_size)
+		parsed_header = blend_file.unpack(self.fmt, header)
+
+		# Order of members is different for different types of header.
+		return BlockHeader(**dict(zip(self.members, parsed_header)))
+
+
+class BlendFile:
+	def __init__(self, blend_file: IO[bytes]):
+		# Blend header format:
+		# Before 5.0  - `BLENDER[-_][vV]xxx`.
+		# After       - `BLENDERzz[-_]yy[vV]xxxx`.
+		self.file = blend_file
+		MAGIC = b"BLENDER"
+		header = self.file.read(len(MAGIC))
+		if header != MAGIC:
+			raise ValueError("Not a .blend file (header: {})".format(header))
+
+		next_byte = self.file.read(1)
+		use_old_header = False
+		if next_byte in (b"_", b"-"):
+			# Assume old header.
+			self.BLEND_HEADER_SIZE = 12
+			use_old_header = True
+		else:
+			self.BLEND_HEADER_SIZE = 17
+		self.file.seek(0)
+		header = self.file.read(self.BLEND_HEADER_SIZE)
+
+		if use_old_header:
+			self.PTR_SIZE = 4 if header[7] == b"_" else 8
+			bigend = header[8] == b"V"
+			self.PTR = "Q" if self.PTR_SIZE == 8 else "I"
+			self.BLENDER_VERSION = header[9:12]
+		else:
+			declared_header_size = int(header[7:9])
+			assert (
+				declared_header_size == self.BLEND_HEADER_SIZE
+			), f"Unexpected declared blend header size: {declared_header_size} != {self.BLEND_HEADER_SIZE}."
+
+			# 32 bit pointers are not supported in a Blender 5.0+ header.
+			ptr_type = header[9:10]
+			assert ptr_type == b"-", f"Unexpected pointer size type: {ptr_type}"
+			self.PTR_SIZE = 8
+
+			self.BLEND_FILE_FORMAT_VERSION = int(header[10:12])
+			assert (
+				self.BLEND_FILE_FORMAT_VERSION == 1
+			), f"Unexpected file format version: {self.BLEND_FILE_FORMAT_VERSION}"
+
+			# Little endian is not supported in a Blender 5.0+ header.
+			endianness = header[12:13]
+			assert endianness == b"v", f"Unexpected endianness type: '{endianness}'."
+			bigend = False
+			self.BLENDER_VERSION = header[13:17]
+
+		self.PTR = "Q" if self.PTR_SIZE == 8 else "I"
+		self.EF = ">" if bigend else "<"
+		self.header_type = BlockHeaderType(use_old_header, self.PTR)
+
+	def __str__(self) -> str:
 		return "Blend file: {}, {} bit pointers".format(
-			"Big-endian" if self.EF == '>' else "Little-endian",
-			self.PTR_SIZE * 8
+			"Big-endian" if self.EF == ">" else "Little-endian", self.PTR_SIZE * 8
 		)
 
-	def unpack(self, fmt, data):
+	def unpack(self, fmt: str, data: bytes) -> Tuple[Any, ...]:
 		return struct.unpack(self.EF + fmt, data)
 
-	def pack(self, fmt, *values):
+	def pack(self, fmt: str, *values: Any) -> bytes:
 		return struct.pack(self.EF + fmt, *values)
 
-	def _seek_after_header(self):
-		self.file.seek(12, 0)
+	def _seek_after_header(self) -> None:
+		self.file.seek(self.BLEND_HEADER_SIZE, 0)
 
-	def _all_block_headers(self):
-		block: bytes
-		size: int
-		oldp: int
-		idx: int
-		cnt: int
+	def _all_block_headers(self) -> Generator[BlockHeader]:
 		self._seek_after_header()
 		while True:
-			header = self.file.read(self.HEADER_SIZE)
-			fmt = "4sI" + self.PTR + "II"
-			block, size, oldp, idx, cnt = self.unpack(fmt, header)
-			if block == b'ENDB':
+			block_header = self.header_type.read(self)
+			if block_header.block == b"ENDB":
 				break
-			yield block, size, oldp, idx, cnt
+			yield block_header
 
 	def scan_dna(self) -> List[DNAStruct]:
 		types = None
-		for block, size, oldp, idx, cnt in self._all_block_headers():
-			if block == b'DNA1':
+		for block_header in self._all_block_headers():
+			block = block_header.block
+			size = block_header.size
+
+			if block == b"DNA1":
 				data = self.file.read(size)
 				types = self._parse_dna1(data)
 			else:
@@ -116,7 +199,12 @@ class BlendFile:
 
 	def count_id_content(self, dna_structs: List[DNAStruct]) -> Tuple[int, int, int, int, int, int]:
 		ndatablocks, ndatablocks_total, nobjs, nobjs_total, nbytes, nbytes_total = 0, 0, 0, 0, 0, 0
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+		for block_header in self._all_block_headers():
+			block = block_header.block
+			size = block_header.size
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			self.file.seek(size, 1)
 			ndatablocks_total += 1
 			nobjs_total += cnt
@@ -135,7 +223,7 @@ class BlendFile:
 
 		return ndatablocks, ndatablocks_total, nobjs, nobjs_total, nbytes, nbytes_total
 
-	def dump_dot_graph(self, dna_structs: List[DNAStruct]):
+	def dump_dot_graph(self, dna_structs: List[DNAStruct]) -> None:
 		print("digraph blend_file {")
 		# excludes = ['MTexPoly', 'MPoly', 'MLoopUV', 'MVert', 'MEdge', 'MLoop', "ARegion", "MDeformVert",
 		#            "IDProperty", "bNodeSocket", "CustomDataLayer"]
@@ -145,7 +233,12 @@ class BlendFile:
 			idx_by_name[ds.name] = idx
 
 		objects = {}
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+		for block_header in self._all_block_headers():
+			size = block_header.size
+			oldp = block_header.oldptr
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			self.file.seek(size, 1)
 			id = "_{:x}".format(oldp)
 			if idx > 0:
@@ -163,7 +256,7 @@ class BlendFile:
 
 		print(" // -------------- Edges --------------")
 
-		def dump_edges(data, ds: DNAStruct):
+		def dump_edges(data, ds: DNAStruct) -> None:
 			for f in ds.fields:
 				if f.is_ptr:
 					if f.typeinf[0] in excludes:
@@ -178,7 +271,12 @@ class BlendFile:
 				ds_field = dna_structs[idx_by_name[f.typeinf[0]]]
 				dump_edges(data[f.offset:f.offset + f.size], ds_field)
 
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+		for block_header in self._all_block_headers():
+			size = block_header.size
+			oldp = block_header.oldptr
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			if idx == 0:
 				self.file.seek(size, 1)
 				continue
@@ -195,7 +293,12 @@ class BlendFile:
 
 	def size_stats(self, dna_structs: List[DNAStruct]) -> List[Tuple[str, int]]:
 		accum = {}
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+		for block_header in self._all_block_headers():
+			block = block_header.block
+			size = block_header.size
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			self.file.seek(size, 1)
 			if idx > 0:
 				key = dna_structs[idx].name
@@ -210,8 +313,9 @@ class BlendFile:
 
 		return sorted(accum.items(), key=lambda v: v[1][0])
 
-	def _dump_object(self, data: bytes, ds: DNAStruct, dna_structs: List[DNAStruct], idx_by_name: Dict[str, int],
-	                 indent=""):
+	def _dump_object(
+		self, data: bytes, ds: DNAStruct, dna_structs: List[DNAStruct], idx_by_name: Dict[str, int], indent=""
+	) -> None:
 		print("{{ // {} bytes".format(ds.size))
 		for f in ds.fields:
 			ftype = f.typeinf[0]
@@ -253,7 +357,7 @@ class BlendFile:
 					print(self.unpack('H', field_data)[0])
 				else:
 					print("// {} bytes (unparsed type)".format(f.size))
-		
+
 			# Handle arrays.
 			if len(f.dims) > 0:
 				size_str = " // {} bytes".format(f.size)
@@ -272,8 +376,14 @@ class BlendFile:
 			_dump_basic_field(field_data, indent)
 		print(indent + "}")
 
-	def find_address(self, addr, dna_structs: List[DNAStruct]):
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+	def find_address(self, addr, dna_structs: List[DNAStruct]) -> None:
+		for block_header in self._all_block_headers():
+			block = block_header.block
+			size = block_header.size
+			oldp = block_header.oldptr
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			if addr < oldp or addr > oldp + size:
 				self.file.seek(size, 1)
 				continue
@@ -302,12 +412,18 @@ class BlendFile:
 			self._dump_object(data, ds, dna_structs, idx_by_name)
 			break
 
-	def dump_all(self, dna_structs: List[DNAStruct]):
+	def dump_all(self, dna_structs: List[DNAStruct]) -> None:
 		idx_by_name = {}
 		for _idx, _ds in enumerate(dna_structs):
 			idx_by_name[_ds.name] = _idx
 
-		for block, size, oldp, idx, cnt in self._all_block_headers():
+		for block_header in self._all_block_headers():
+			block = block_header.block
+			size = block_header.size
+			oldp = block_header.oldptr
+			idx = block_header.idx
+			cnt = block_header.cnt
+
 			if idx == 0:
 				print("{} block of size {} at {:x}".format(block, size, oldp))
 				maxbytes = 64
